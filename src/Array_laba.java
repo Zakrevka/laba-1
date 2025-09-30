@@ -40,7 +40,46 @@ public class Array_laba {
         System.out.println("Odd: " + odd);
     }
 
-    public void MaxNUmber() {
-
+    public void MaxMinNumber() {
+        int max = array[0];
+        int min = array[0];
+        if (array.length == 1)
+        {
+            System.out.println("Can't find min and max number");
+        }
+        for (int i = 1 ; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+            if (min > array[i]) {
+                min = array[i];
+            }
+        }
+        System.out.println("Max number is: " + max + ". Min number is: " + min);
     }
+
+    public void Divide3Or9() {
+        String numbers_divides = new String();
+        for(int i = 0; i < array.length; i++)
+        {
+            if(array[i] / 3 == 0 || array[i] / 9 == 0) {
+                numbers_divides += array[i];
+                numbers_divides += ' ';
+            }
+        }
+        System.out.println("Numbers that divide by 3 or 9: " + numbers_divides);
+    }
+
+    public void Divide5And7() {
+        String numbers_divides = new String();
+        for(int i = 0; i < array.length; i++)
+        {
+            if(array[i] / 5 == 0 && array[i] / 7 == 0) {
+                numbers_divides += array[i];
+                numbers_divides += ' ';
+            }
+        }
+        System.out.println("Numbers that divide by 5 and 7: " + numbers_divides);
+    }
+
 }

@@ -9,5 +9,10 @@ public class Main {
         Array_laba array = new Array_laba(numbers);
         array.display();
         array.evenOrOdd();
+        array.MaxMinNumber();
+        array.Divide3Or9();
+        array.Divide5And7();
+
+        scanner.close();
     }
 }
