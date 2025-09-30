@@ -12,6 +12,7 @@ public class Main {
         array.MaxMinNumber();
         array.Divide3Or9();
         array.Divide5And7();
+        array.NotEqualNumbers();
 
         scanner.close();
     }

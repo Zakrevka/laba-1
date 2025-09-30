@@ -21,19 +21,17 @@ public class Array_laba {
     }
 
     public void evenOrOdd() {
-        String even = new String();
-        String odd = new String();
+        StringBuilder even = new StringBuilder();
+        StringBuilder odd = new StringBuilder();
         for (int i = 0; i < numbers; i++)
         {
             if(array[i] % 2 == 0)
             {
-                even += array[i];
-                even += " ";
+                even.append(array[i]).append(" ");
             }
             else
             {
-                odd += array[i];
-                odd += " ";
+                odd.append(array[i]).append(" ");
             }
         }
         System.out.println("Even: " + even);
@@ -59,27 +57,42 @@ public class Array_laba {
     }
 
     public void Divide3Or9() {
-        String numbers_divides = new String();
+        StringBuilder numbers_divides = new StringBuilder();
         for(int i = 0; i < array.length; i++)
         {
-            if(array[i] / 3 == 0 || array[i] / 9 == 0) {
-                numbers_divides += array[i];
-                numbers_divides += ' ';
+            if (array[i] % 3 == 0 || array[i] % 9 == 0)
+            {
+                numbers_divides.append(array[i]).append(" ");
             }
         }
         System.out.println("Numbers that divide by 3 or 9: " + numbers_divides);
     }
 
     public void Divide5And7() {
-        String numbers_divides = new String();
+        StringBuilder numbers_divides = new StringBuilder();
         for(int i = 0; i < array.length; i++)
         {
-            if(array[i] / 5 == 0 && array[i] / 7 == 0) {
-                numbers_divides += array[i];
-                numbers_divides += ' ';
+            if (array[i] % 5 == 0 && array[i] % 7 == 0) {
+                numbers_divides.append(array[i]).append(" ");
             }
         }
         System.out.println("Numbers that divide by 5 and 7: " + numbers_divides);
     }
 
+    public void NotEqualNumbers() {
+        StringBuilder NotEqualNumbers = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            if(array[i] > 100 && array[i] < 999)
+            {
+                int hundreds = array[i] / 100;
+                int tens = (array[i] / 10) % 10;
+                int units = array[i] % 10;
+                if (hundreds != tens && hundreds != units && tens != units)
+                {
+                    NotEqualNumbers.append(array[i]).append(" ");
+                }
+            }
+        }
+        System.out.println("Not equal numbers: " + NotEqualNumbers);
+    }
 }
